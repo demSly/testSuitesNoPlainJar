@@ -23,6 +23,13 @@ testing {
     }
 }
 
+// Starting from Spring Boot 2.5.0, also a plain jar is generated.
+// Normally we would skip its creation, but test suites Gradle plugin assumes it exists, as shown in :
+// ./gradlew clean e2eTest --debug | grep "NormalizingJavaCompiler"
+jar {
+    enabled = false
+}
+
 repositories {
     mavenCentral()
 }
