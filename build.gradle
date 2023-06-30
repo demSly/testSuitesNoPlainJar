@@ -27,7 +27,7 @@ testing {
 // Normally we would skip its creation, but test suites Gradle plugin assumes it exists, as shown in :
 // ./gradlew clean e2eTest --debug | grep "NormalizingJavaCompiler"
 jar {
-    enabled = false
+    enabled = true
 }
 
 repositories {
